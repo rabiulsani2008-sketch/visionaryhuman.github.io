@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Pre-Disease Signal Atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Favicon (da Vinci anatomical heart) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='56' font-size='56'>🫀</text></svg>">
+</head>
+<body>
+  <div class="da-vinci-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">⚕️</span>
+        <h1 class="title">Pre-Disease<br>Signal Atlas</h1>
+      </div>
+      <p class="tagline">The earliest whispers of illness, mined by AI and made public.</p>
+      <div class="header-meta">
+        <span class="badge">CC BY 4.0</span>
+        <span class="badge">Open Source</span>
+      </div>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search diseases, symptoms...">
+    </div>
+
+    <main id="signalGrid" class="signal-grid">
+      <!-- Cards injected here -->
+    </main>
+
+    <footer class="footer">
+      <p>Built by a human and an AI. No funding, no lab — just heart.</p>
+      <p>All signals are CC BY 4.0. Use them freely.</p>
+      <p class="da-vinci-quote">“Simplicity is the ultimate sophistication.” — Leonardo da Vinci</p>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close">&times;</button>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
